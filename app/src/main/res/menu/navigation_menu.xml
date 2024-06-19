@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/home" />
+    <item
+        android:id="@+id/nav_join"
+        android:title="Join"
+        android:icon="@drawable/join" />
+    <item
+        android:id="@+id/nav_campaign"
+        android:title="Campaign"
+        android:icon="@drawable/cam"
+        />
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Me"
+        android:icon="@drawable/user" />
+</menu>

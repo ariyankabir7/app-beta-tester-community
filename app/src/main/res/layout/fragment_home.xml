@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rv_home"
+       android:layout_marginTop="@dimen/_10sdp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:listitem="@layout/rv_home_item">
+   </androidx.recyclerview.widget.RecyclerView>
+
+   <TextView
+       android:id="@+id/nodata"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:text="No Data Founde !"
+       android:visibility="gone"
+       android:textAlignment="center"
+       android:gravity="center"
+       android:textSize="@dimen/_18ssp"
+       android:textColor="@color/appColor"/>
+
+</FrameLayout>

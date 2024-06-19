@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f3ff"
+    tools:context=".HomeActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/appbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/white"
+            app:fabAlignmentMode="center"
+            app:fabAnchorMode="cradle"
+            app:fabCradleMargin="@dimen/_10sdp"
+            app:fabCradleRoundedCornerRadius="@dimen/_20sdp">
+
+            <LinearLayout
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0000ffff"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    tools:ignore="Suspicious0dp">
+
+                    <ImageView
+                        android:id="@+id/nav_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/home" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_under"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@color/appColor"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    tools:ignore="Suspicious0dp">
+
+                    <ImageView
+                        android:id="@+id/nav_join"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/join" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_join_under"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:background="@color/appColor"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:src="@drawable/cam"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <ImageView
+                        android:id="@+id/nav_campaign"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/cam" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_campaign_under"
+                        android:layout_width="@dimen/_20sdp"
+                        android:background="@color/appColor"
+                        android:layout_height="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:ignore="Suspicious0dp">
+
+                    <ImageView
+                        android:id="@+id/nav_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/user" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_profile_under"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@color/appColor"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/appColor"
+            android:src="@drawable/add_24"
+            app:layout_anchor="@id/bottomAppBar"
+            app:maxImageSize="@dimen/_25sdp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            app:tint="@color/white" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
